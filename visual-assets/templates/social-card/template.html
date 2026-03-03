@@ -1,0 +1,71 @@
+<div class="social-card {{theme}}">
+    <div class="card-header">
+        <div class="avatar">
+            {{#avatar}}
+            <img src="{{avatar}}" alt="{{author}}">
+            {{/avatar}}
+            {{^avatar}}
+            <div class="avatar-initial">{{avatarInitial}}</div>
+            {{/avatar}}
+        </div>
+        <div class="user-info">
+            <div class="username">{{author}}</div>
+            <div class="timestamp">{{date}}</div>
+            {{#platform}}<div class="platform">{{platform}}</div>{{/platform}}
+        </div>
+        {{#verified}}<div class="verified-badge">✓</div>{{/verified}}
+    </div>
+    
+    <div class="card-content">
+        {{#image}}
+        <div class="featured-image">
+            <img src="{{image}}" alt="{{title}}">
+        </div>
+        {{/image}}
+        
+        <h3 class="title">{{title}}</h3>
+        <p class="description">{{description}}</p>
+        
+        {{#link}}
+        <div class="link-preview">
+            <div class="link-icon">🔗</div>
+            <div class="link-info">
+                <div class="link-title">{{link.title}}</div>
+                <div class="link-domain">{{link.domain}}</div>
+            </div>
+        </div>
+        {{/link}}
+        
+        {{#tags}}
+        <div class="tags">
+            {{#tags}}<span class="tag">{{.}}</span>{{/tags}}
+        </div>
+        {{/tags}}
+    </div>
+    
+    <div class="card-footer">
+        <button class="action-btn like-btn" data-count="{{likes}}">
+            <span class="icon">❤️</span>
+            <span class="count">{{likes}}</span>
+        </button>
+        <button class="action-btn comment-btn" data-count="{{comments}}">
+            <span class="icon">💬</span>
+            <span class="count">{{comments}}</span>
+        </button>
+        <button class="action-btn share-btn" data-count="{{shares}}">
+            <span class="icon">🔗</span>
+            <span class="count">{{shares}}</span>
+        </button>
+        <button class="action-btn save-btn">
+            <span class="icon">📌</span>
+            <span class="label">保存</span>
+        </button>
+    </div>
+    
+    {{#branding}}
+    <div class="branding">
+        <div class="brand-logo">{{branding.logo}}</div>
+        <div class="brand-text">{{branding.text}}</div>
+    </div>
+    {{/branding}}
+</div>
