@@ -1,0 +1,149 @@
+{
+  "name": "social-card",
+  "version": "1.0.0",
+  "description": "社交媒体分享卡片模板",
+  "author": "OpenClaw Visual System",
+  "created": "2026-03-03",
+  "category": "social-media",
+  "tags": ["social", "card", "share", "post"],
+  
+  "variables": {
+    "required": ["title", "description", "author", "date"],
+    "optional": {
+      "theme": {
+        "type": "string",
+        "default": "default",
+        "options": ["default", "professional", "creative", "minimal"],
+        "description": "卡片主题样式"
+      },
+      "avatar": {
+        "type": "url",
+        "description": "用户头像URL"
+      },
+      "avatarInitial": {
+        "type": "string",
+        "default": "👤",
+        "description": "无头像时显示的首字母或图标"
+      },
+      "platform": {
+        "type": "string",
+        "description": "发布平台名称"
+      },
+      "verified": {
+        "type": "boolean",
+        "default": false,
+        "description": "是否显示认证徽章"
+      },
+      "image": {
+        "type": "url",
+        "description": "特色图片URL"
+      },
+      "link": {
+        "type": "object",
+        "properties": {
+          "title": "string",
+          "domain": "string"
+        },
+        "description": "链接预览信息"
+      },
+      "tags": {
+        "type": "array",
+        "items": "string",
+        "description": "标签数组"
+      },
+      "likes": {
+        "type": "string|number",
+        "default": "0",
+        "description": "点赞数"
+      },
+      "comments": {
+        "type": "string|number",
+        "default": "0",
+        "description": "评论数"
+      },
+      "shares": {
+        "type": "string|number",
+        "default": "0",
+        "description": "分享数"
+      },
+      "branding": {
+        "type": "object",
+        "properties": {
+          "logo": "string",
+          "text": "string"
+        },
+        "description": "品牌标识信息"
+      }
+    }
+  },
+  
+  "dimensions": {
+    "default": {
+      "width": 500,
+      "height": "auto",
+      "aspectRatio": "1.91:1"
+    },
+    "twitter": {
+      "width": 1200,
+      "height": 628,
+      "aspectRatio": "1.91:1"
+    },
+    "linkedin": {
+      "width": 1200,
+      "height": 627,
+      "aspectRatio": "1.91:1"
+    },
+    "instagram": {
+      "width": 1080,
+      "height": 1080,
+      "aspectRatio": "1:1"
+    }
+  },
+  
+  "dependencies": [
+    "svg/icons/social/heart.svg",
+    "svg/icons/social/comment.svg",
+    "svg/icons/social/share.svg",
+    "svg/icons/social/save.svg",
+    "themes/default.json"
+  ],
+  
+  "examples": [
+    {
+      "title": "欢迎使用OpenClaw视觉系统",
+      "description": "这是一个完全免费的视觉内容生成系统，使用GitHub作为CDN存储资源。",
+      "author": "AI Assistant",
+      "date": "2026-03-03",
+      "theme": "professional",
+      "likes": "1.2K",
+      "comments": "45",
+      "shares": "89",
+      "tags": ["AI", "Design", "OpenSource", "GitHub"]
+    },
+    {
+      "title": "零成本视觉设计解决方案",
+      "description": "通过GitHub存储方案，我们将内存占用从100MB降低到不足1MB，同时保持优秀的性能。",
+      "author": "Tech Team",
+      "date": "2026-03-03",
+      "theme": "creative",
+      "verified": true,
+      "likes": "2.5K",
+      "comments": "128",
+      "shares": "356"
+    }
+  ],
+  
+  "renderOptions": {
+    "format": "html",
+    "minify": true,
+    "inlineStyles": true,
+    "includeDoctype": false,
+    "responsive": true
+  },
+  
+  "metadata": {
+    "generator": "OpenClaw Visual Template System v1.0",
+    "license": "MIT",
+    "repository": "https://github.com/yourusername/visual-assets"
+  }
+}
